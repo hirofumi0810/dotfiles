@@ -177,12 +177,41 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
-alias ls='ls -a -G -F'
-alias la='ls -la -G -F'
-alias internbaito_hiro='ssh -i ~/.ssh/internbaito_developer.pem hiro@52.196.116.27'
-alias internbaito_kazuki='ssh -i ~/.ssh/internbaito_developer.pem kazuki@52.196.116.27'
+
+# ls
+case ${OSTYPE} in
+    darwin*)
+        # Mac
+        export CLICOLOR=1
+        alias ls='ls -F -G'
+        alias la='ls -a -F -G'
+        alias ll='ls -al -F -G'
+        ;;
+    linux*)
+        # Linux
+        alias ls='ls -F --color=auto'
+        alias la='ls -a -F --color=auto'
+        alias ll='ls -sl -F --color=auto'
+        ;;
+esac
+
+# C で標準出力をクリップボードにコピーする
+# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+if which pbcopy >/dev/null 2>&1 ; then
+    # Mac
+    alias -g C='| pbcopy'
+elif which xsel >/dev/null 2>&1 ; then
+    # Linux
+    alias -g C='| xsel --input --clipboard'
+fi
 
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
 
+# Sublime Text 3
+# alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# ssh
+alias internbaito_hiro='ssh -i ~/.ssh/internbaito_developer.pem hiro@52.196.116.27'
+alias internbaito_kazuki='ssh -i ~/.ssh/internbaito_developer.pem kazuki@52.196.116.27'

@@ -1,5 +1,6 @@
 # dotfiles
-## my dotfiles
-### zsh
-### vim
-### tmux
+my dotfiles
+
+## zsh
+## vim
+## tmux
