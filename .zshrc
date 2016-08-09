@@ -183,15 +183,13 @@ case ${OSTYPE} in
     darwin*)
         # Mac
         export CLICOLOR=1
-        alias ls='ls -F -G'
-        alias la='ls -a -F -G'
+        alias ls='ls -a -F -G'
         alias ll='ls -al -F -G'
         ;;
     linux*)
         # Linux
-        alias ls='ls -F --color=auto'
-        alias la='ls -a -F --color=auto'
-        alias ll='ls -sl -F --color=auto'
+        alias ls='ls -a -F --color=auto'
+        alias ll='ls -al -F --color=auto'
         ;;
 esac
 

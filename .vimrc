@@ -1,45 +1,45 @@
-"カラースキーマ
+" カラースキーマ
 syntax enable
 set background=dark
 colorscheme solarized
 
-"新しい行のインデントを現在行と同じにする
+" 新しい行のインデントを現在行と同じにする
 set autoindent
 
-"バックアップファイルのディレクトリを指定する
+" バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/.vim/backup
 
-"クリップボードをWindowsと連携する
+" クリップボードをWindowsと連携する
 set clipboard=unnamed
 
-"vi互換をオフする
+" vi互換をオフする
 set nocompatible
 
-"スワップファイル用のディレクトリを指定する
+" スワップファイル用のディレクトリを指定する
 set directory=$HOME/.vim/backup
 
-"タブの代わりに空白文字を指定する
+" タブの代わりに空白文字を指定する
 set expandtab
 
-"タブ幅の設定
+" タブ幅の設定
 set tabstop=4
 
-"変更中のファイルでも、保存しないで他のファイルを表示する
+" 変更中のファイルでも、保存しないで他のファイルを表示する
 set hidden
 
-"インクリメンタルサーチを行う
+" インクリメンタルサーチを行う
 set incsearch
 
-"行番号を表示する
+" 行番号を表示する
 set number
 
-"閉括弧が入力された時、対応する括弧を強調する
+" 閉括弧が入力された時、対応する括弧を強調する
 set showmatch
 
-"新しい行を作った時に高度な自動インデントを行う
+" 新しい行を作った時に高度な自動インデントを行う
 set smarttab
 
-"新しい行を作った時に高度な自動インデントを行う
+" 新しい行を作った時に高度な自動インデントを行う
 set smarttab
 
 " grep検索を設定する
