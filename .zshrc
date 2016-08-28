@@ -171,7 +171,7 @@ tmux_automatically_attach_session
 
 
 ######################################################################
-# エイリアス
+# alias
 ######################################################################
 alias rm='rm -i'
 alias cp='cp -i'
@@ -203,13 +203,24 @@ elif which xsel >/dev/null 2>&1 ; then
     alias -g C='| xsel --input --clipboard'
 fi
 
-# グローバルエイリアス
+# global alias
 alias -g L='| less'
 alias -g G='| grep'
 
 # Sublime Text 3
 # alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
+# blowser
+alias chrome="open /Applications/Google\ Chrome.app"
+alias firefox="open -a Firefox"
+alias safari="open -a Safari"
+
 # ssh
 alias internbaito_hiro='ssh -i ~/.ssh/internbaito_developer.pem hiro@52.196.116.27'
 alias internbaito_kazuki='ssh -i ~/.ssh/internbaito_developer.pem kazuki@52.196.116.27'
+
+# do "ls" after "cd"
+cdls () {
+    \cd "$@" && ls
+}
+alias cd="cdls"
