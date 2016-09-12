@@ -1,0 +1,24 @@
+{
+	"auto_match_enabled": true,  // 閉じ括弧などを補完
+	"bold_folder_labels": true,  // サイドバーのフォルダ名を太字にする
+	"close_windows_when_empty": true,  // 開いているファイルがなくなったらSublimeを終了するかどうか
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",  // カラースキーマ
+	"default_encoding": "UTF-8",  // デフォルトの文字コード
+	"draw_white_space": "all",  // スペースやタブを可視化
+	"ensure_newline_at_eof_on_save": true,  // 最後の行を空白行にして保存
+	"fallback_encoding": "UTF-8",  // 文字コードを自動判別できなかった時のデフォルト文字コード
+	"font_face": "Ricty Diminished Regular",  // フォント
+	"font_size": 17,  // フォントサイズ
+	"highlight_line": true,  // 現在行をハイライト
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_top": 4,  // 各行の上側の余白のサイズ
+	"show_encoding": true,  // 文字コードをステータスバーに表示
+	"show_line_endings": true,  // 改行コードをステータスバーに表示
+	"tab_size": 4,  // タブのサイズ
+	"translate_tabs_to_spaces": true,  //タブが入力された場合にスペースに置換
+	"trim_trailing_white_space_on_save": true,  // 保存時に空白を除去
+	"word_wrap": true  // ページ端で折り返す
+}
