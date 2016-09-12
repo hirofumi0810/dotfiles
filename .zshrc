@@ -208,7 +208,7 @@ alias -g L='| less'
 alias -g G='| grep'
 
 # Sublime Text 3
-# alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # blowser
 alias chrome="open /Applications/Google\ Chrome.app"
