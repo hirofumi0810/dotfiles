@@ -1,8 +1,15 @@
 #!/bin/sh
 
-# シンボリックリンクを張る
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/colors ~/.vim/colors
+# zsh
+ln -s ~/dotfiles/.zshenv ~/.zshenv
+ln -s ~/dotfiles/.zsh ~/.zsh
 
+# tmux
+ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+# vim
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.vim ~/.vim
+
+# peco
+ln -s ~/dotfiles/.peco ~/.peco
