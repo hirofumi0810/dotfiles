@@ -65,7 +65,8 @@ setopt extended_glob
 # 賢いmvを有効にする
 autoload zmv
 
-
+# JAVA
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # module
 [ -f $ZDOTDIR/.zshrc_alias ] && . $ZDOTDIR/.zshrc_alias
