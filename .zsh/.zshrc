@@ -12,7 +12,7 @@ colors
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
-# emacs 風キーバインドにする
+# emacs風キーバインドにする
 bindkey -e
 
 # 読み込むテーマを指定
@@ -38,7 +38,7 @@ set -g set-titles-string '#W'
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
-# beep を無効にする
+# beepを無効にする
 setopt no_beep
 
 # フローコントロールを無効にする
@@ -53,7 +53,7 @@ setopt interactive_comments
 # ディレクトリ名だけでcdする
 setopt auto_cd
 
-# cd したら自動的にpushdする
+# cdしたら自動的にpushdする
 setopt auto_pushd
 
 # 重複したディレクトリを追加しない
@@ -65,13 +65,28 @@ setopt extended_glob
 # 賢いmvを有効にする
 autoload zmv
 
-# JAVA
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+######################################################################
 # module
+######################################################################
 [ -f $ZDOTDIR/.zshrc_alias ] && . $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
+
+
+######################################################################
+# python
+######################################################################
+# 環境変数の設定
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
+######################################################################
+# JAVA
+######################################################################
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`

@@ -2,6 +2,7 @@
 
 # zsh
 ln -s ~/dotfiles/.zshenv ~/.zshenv
+ln -s dotfiles/.zprofile ~/.zprofile
 ln -s ~/dotfiles/.zsh ~/.zsh
 
 # tmux
