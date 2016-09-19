@@ -14,3 +14,7 @@ ln -s ~/dotfiles/.vim ~/.vim
 
 # peco
 ln -s ~/dotfiles/.peco ~/.peco
+
+# sublime
+ln -s ~/Dropbox/Sublime\ Text\ 3/Installed\ Packages  ~/Library/Application\ Support/Sublime\ Text\ 3
+ln -s ~/Dropbox/Sublime\ Text\ 3/Packages ~/Library/Application\ Support/Sublime\ Text\ 3
