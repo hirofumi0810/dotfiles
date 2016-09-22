@@ -12,7 +12,7 @@ colors
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
-# emacs 風キーバインドにする
+# emacs風キーバインドにする
 bindkey -e
 
 # 読み込むテーマを指定
@@ -38,7 +38,7 @@ set -g set-titles-string '#W'
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
-# beep を無効にする
+# beepを無効にする
 setopt no_beep
 
 # フローコントロールを無効にする
@@ -47,13 +47,13 @@ setopt no_flow_control
 # Ctrl+Dでzshを終了しない
 setopt ignore_eof
 
-# '#' 以降をコメントとして扱う
+# '#'以降をコメントとして扱う
 setopt interactive_comments
 
 # ディレクトリ名だけでcdする
 setopt auto_cd
 
-# cd したら自動的にpushdする
+# cdしたら自動的にpushdする
 setopt auto_pushd
 
 # 重複したディレクトリを追加しない
@@ -65,10 +65,20 @@ setopt extended_glob
 # 賢いmvを有効にする
 autoload zmv
 
+
+######################################################################
+# PATH
+######################################################################
 # JAVA
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+
+######################################################################
 # module
+######################################################################
 [ -f $ZDOTDIR/.zshrc_alias ] && . $ZDOTDIR/.zshrc_alias
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func
