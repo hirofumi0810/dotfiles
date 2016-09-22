@@ -65,6 +65,7 @@ setopt extended_glob
 # 賢いmvを有効にする
 autoload zmv
 
+<<<<<<< HEAD
 
 ######################################################################
 # PATH
@@ -76,6 +77,9 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 
+=======
+
+>>>>>>> 258cbd8f63b6d82f5da4854b8bbe66f6ca2407e8
 ######################################################################
 # module
 ######################################################################
@@ -85,3 +89,18 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
+
+
+######################################################################
+# python
+######################################################################
+# 環境変数の設定
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
+######################################################################
+# JAVA
+######################################################################
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
