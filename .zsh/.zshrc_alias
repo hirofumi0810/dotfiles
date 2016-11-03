@@ -42,7 +42,7 @@ alias -g G='| grep'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # blowser
-alias chsrome="open /Applications/Google\ Chrome.app"
+alias chrome="open /Applications/Google\ Chrome.app"
 alias firefox="open -a Firefox"
 alias safari="open -a Safari"
 
