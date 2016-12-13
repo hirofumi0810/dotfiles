@@ -6,3 +6,21 @@ cdls () {
     \cd "$@" && ls
 }
 alias cd="cdls"
+
+# do "ls" after "mv"
+mvls () {
+    \mv "$@" && ls
+}
+alias mv="mvls"
+
+# do "ls" after "rm"
+rmls () {
+    \rm "$@" && ls
+}
+alias rm="rmls"
+
+# do "ls" after "touch"
+touchls () {
+    \touch "$@" && ls
+}
+alias touch="touchls"
