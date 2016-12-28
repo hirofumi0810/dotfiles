@@ -38,13 +38,59 @@ fi
 alias -g L='| less'
 alias -g G='| grep'
 
-# Sublime Text 3
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+### OS settings
+case ${OSTYPE} in
+    darwin*)
+        ####################
+        # Mac OS
+        ####################
+        # ls
+        export CLICOLOR=1
+        alias ls='ls -a -F -G'
+        alias ll='ls -al -F -G'
 
-# blowser
-alias chrome="open /Applications/Google\ Chrome.app"
-alias firefox="open -a Firefox"
-alias safari="open -a Safari"
+        # C で標準出力をクリップボードにコピーする
+        # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+        if which pbcopy >/dev/null 2>&1 ; then
+            alias -g C='| pbcopy'
+        fi
 
-# favorite site
-alias github="open /Applications/Google\ Chrome.app http://github.com"
+        # Sublime Text 3
+        alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+        # blowser
+        alias chrome="open /Applications/Google\ Chrome.app"
+        alias safari="open -a Safari"
+        alias firefox="open -a Firefox"
+
+        # favorite site
+        alias github="open /Applications/Google\ Chrome.app http://github.com"
+        ;;
+    linux*)
+        ###################
+        # Linux
+        ###################
+        # ls
+        alias ls='ls -a -F --color=auto'
+        alias ll='ls -al -F --color=auto'
+
+        # C で標準出力をクリップボードにコピーする
+        # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+        if which xsel >/dev/null 2>&1 ; then
+            alias -g C='| xsel --input --clipboard'
+        fi
+
+        # blowser
+
+        # favorite site
+
+        # solalized
+        if [ -x /usr/bin/dircolors ]; then
+            test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        fi
+
+        # tensorflow
+        alias tf='source activate tensorflow'
+        ;;
+esac
+
