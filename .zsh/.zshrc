@@ -74,21 +74,23 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 case ${OSTYPE} in
+    ###################
+    # Mac OS
+    ###################
     darwin*)
-        ###################
-        # Mac OS
-        ###################
         # JAVA
         export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
         # nodebrew
         export PATH=$HOME/.nodebrew/current/bin:$PATH
+
         # anaconda
 
         ;;
+    ###################
+    # Linux
+    ###################
     linux*)
-        ###################
-        # Linux
-        ###################
         # anaconda
         export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
         # export PATH="$PYENV_ROOT/versions/anaconda-2.4.0/bin/:$PATH"
