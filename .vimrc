@@ -10,7 +10,9 @@ set autoindent
 set backupdir=$HOME/.vim/backup
 
 " クリップボードをWindowsと連携する
-set clipboard=unnamed
+" set clipboard=unnamed
+" クリップボード連携
+set clipboard=unnamedplus
 
 " vi互換をオフする
 set nocompatible

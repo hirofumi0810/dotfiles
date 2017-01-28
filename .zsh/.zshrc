@@ -65,6 +65,7 @@ setopt extended_glob
 # 賢いmvを有効にする
 autoload zmv
 
+
 ######################################################################
 # PATH
 ######################################################################
@@ -94,6 +95,8 @@ case ${OSTYPE} in
         # anaconda
         export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
         # export PATH="$PYENV_ROOT/versions/anaconda-2.4.0/bin/:$PATH"
+
+        export all_proxy="https://130.54.20.150:3128/"
         ;;
 esac
 
