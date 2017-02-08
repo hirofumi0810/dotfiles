@@ -33,7 +33,7 @@ set -g set-titles-string '#W'
 
 
 ######################################################################
-# オプション
+# option
 ######################################################################
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -79,6 +79,7 @@ case ${OSTYPE} in
     # Mac OS
     ###################
     darwin*)
+        echo 'loading MacOSX settings'
         # JAVA
         export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
@@ -86,14 +87,23 @@ case ${OSTYPE} in
         export PATH=$HOME/.nodebrew/current/bin:$PATH
 
         # anaconda
+        # python3
+        export PATH="$PYENV_ROOT/versions/anaconda3-2.5.0/bin/:$PATH"
+        # python2
+        # export PATH="$PYENV_ROOT/versions/anaconda-2.2.5/bin/:$PATH"
 
+        # homebrew
+        # TODO: solve path overwrite
+        # export PATH=/usr/local/bin:/usr/local/sbin:$PATH
         ;;
     ###################
     # Linux
     ###################
     linux*)
         # anaconda
+        # python3
         export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
+        # python2
         # export PATH="$PYENV_ROOT/versions/anaconda-2.4.0/bin/:$PATH"
 
         export all_proxy="https://130.54.20.150:3128/"
