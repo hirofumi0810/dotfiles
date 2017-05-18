@@ -1,0 +1,18 @@
+############################
+# Path setting (MacOS only)
+############################
+# JAVA
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# anaconda
+# python3
+export PATH="$PYENV_ROOT/versions/anaconda3-2.5.0/bin/:$PATH"
+# python2
+# export PATH="$PYENV_ROOT/versions/anaconda-2.2.5/bin/:$PATH"
+
+# homebrew
+# TODO: solve overwriting between pyebv and homebrew
+# export PATH=/usr/local/bin:/usr/local/sbin:$PATH

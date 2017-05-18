@@ -1,0 +1,27 @@
+#####################
+# alias (MacOS only)
+#####################
+# ls
+export CLICOLOR=1
+alias ls='ls -a -F -G'
+alias ll='ls -al -F -G'
+
+# C で標準出力をクリップボードにコピーする
+# mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
+if which pbcopy >/dev/null 2>&1 ; then
+    alias -g C='| pbcopy'
+fi
+
+# Sublime Text 3
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# blowser
+alias chrome="open /Applications/Google\ Chrome.app"
+alias safari="open -a Safari"
+alias firefox="open -a Firefox"
+
+# favorite site
+alias github="open /Applications/Google\ Chrome.app http://github.com"
+
+# tensorflow
+alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate tensorflow"

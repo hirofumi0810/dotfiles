@@ -67,56 +67,38 @@ autoload zmv
 
 
 ######################################################################
-# PATH
+# PATH (common)
 ######################################################################
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-case ${OSTYPE} in
-    ###################
-    # Mac OS
-    ###################
-    darwin*)
-        echo 'loading MacOSX settings'
-        # JAVA
-        export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-        # nodebrew
-        export PATH=$HOME/.nodebrew/current/bin:$PATH
+###################
+# alias (common)
+###################
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias tree='tree -N .'
+alias less='less -N'
+alias diff='colordiff'
 
-        # anaconda
-        # python3
-        export PATH="$PYENV_ROOT/versions/anaconda3-2.5.0/bin/:$PATH"
-        # python2
-        # export PATH="$PYENV_ROOT/versions/anaconda-2.2.5/bin/:$PATH"
-
-        # homebrew
-        # TODO: solve path overwrite
-        # export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-        ;;
-    ###################
-    # Linux
-    ###################
-    linux*)
-        # anaconda
-        # python3
-        export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
-        # python2
-        # export PATH="$PYENV_ROOT/versions/anaconda-2.4.0/bin/:$PATH"
-
-        export all_proxy="https://130.54.20.150:3128/"
-        ;;
-esac
+# global alias
+alias -g L='| less'
+alias -g G='| grep'
 
 
 ######################################################################
 # module
 ######################################################################
-[ -f $ZDOTDIR/.zshrc_alias ] && . $ZDOTDIR/.zshrc_alias
+echo 'loading' `uname` 'settings'
+[ -f $ZDOTDIR/.zshrc_alias.`uname` ] && . $ZDOTDIR/.zshrc_alias.`uname`
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
+[ -f $ZDOTDIR/.zshrc_path.`uname` ] && . $ZDOTDIR/.zshrc_path.`uname`

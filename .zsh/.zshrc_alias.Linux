@@ -1,0 +1,23 @@
+######################
+# alias (Linux only)
+######################
+# ls
+alias ls='ls -a -F --color=auto'
+alias ll='ls -al -F --color=auto'
+
+# blowser
+
+# favorite site
+
+# solalized
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+# tensorflow
+alias tf='source activate tensorflow'
+
+# save from tmux buffer to clipboard
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+alias copy='tmux save-buffer - | pbcopy'
