@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # install pyenv
 pyenv install anaconda3-2.5.0

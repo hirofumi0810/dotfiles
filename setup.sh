@@ -2,11 +2,11 @@
 
 # 1. homebrew(OSX) or apt(Linux)
 if [ `uname` \=\= 'Darwin' ] ; then
-  chmod 755 install_homebrew.sh
-  ./install_homebrew.sh
+  chmod 755 ~/dotfiles/homebrew/install_homebrew.sh
+  ~/dotfiles/homebrew/install_homebrew.sh
 else
-  chmod 755 install_apt.sh
-  ./install_apt.sh
+  chmod 755 ~/dotfiles/apt/install_apt.sh
+  ~/dotfiles/apt/install_apt.sh
 fi
 
 
@@ -25,8 +25,8 @@ rm -rf ./vim-colors-solarized
 
 
 # 4. python
-chmod 755 install_python.sh
-./install_python.sh
+chmod 755 ~/dotfiles/python/install_python.sh
+~/dotfiles/python/install_python.sh
 
 
 # 5. set paths
@@ -37,7 +37,8 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 
 # 6. atom
-# comming soon
+chmod 755 ~/dotfiles/atom/install_atom.sh
+~/dotfiles/atom/install_atom.sh
 
 
 # 7. github
