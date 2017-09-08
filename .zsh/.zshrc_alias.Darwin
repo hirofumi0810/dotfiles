@@ -1,6 +1,9 @@
-#####################
-# alias (MacOS only)
-#####################
+######################################################################
+# alias (OSX setting)
+######################################################################
+
+echo 'loading' `uname` alias 'settings'
+
 # ls
 export CLICOLOR=1
 alias ls='ls -a -F -G'
@@ -15,6 +18,8 @@ fi
 # Sublime Text 3
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
+# Atom
+
 # blowser
 alias chrome="open /Applications/Google\ Chrome.app"
 alias safari="open -a Safari"
@@ -23,5 +28,5 @@ alias firefox="open -a Firefox"
 # favorite site
 alias github="open /Applications/Google\ Chrome.app http://github.com"
 
-# tensorflow
+# tensorflow environment
 alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate tensorflow"

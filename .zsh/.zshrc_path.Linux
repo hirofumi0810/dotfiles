@@ -1,7 +1,8 @@
-#############################
-# Path setting (Ubuntu only)
-#############################
-# anaconda
+######################################################################
+# Path (Ubuntu setting)
+######################################################################
+
+# Anaconda
 # python3
 export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
 # python2

@@ -67,38 +67,12 @@ autoload zmv
 
 
 ######################################################################
-# PATH (common)
-######################################################################
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-
-###################
-# alias (common)
-###################
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias mkdir='mkdir -p'
-alias tree='tree -N .'
-alias less='less -N'
-alias diff='colordiff'
-
-# global alias
-alias -g L='| less'
-alias -g G='| grep'
-
-
-######################################################################
 # module
 ######################################################################
-echo 'loading' `uname` 'settings'
+[ -f $ZDOTDIR/.zshrc_path.`uname` ] && . $ZDOTDIR/.zshrc_path.`uname`
 [ -f $ZDOTDIR/.zshrc_alias.`uname` ] && . $ZDOTDIR/.zshrc_alias.`uname`
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
-[ -f $ZDOTDIR/.zshrc_path.`uname` ] && . $ZDOTDIR/.zshrc_path.`uname`
