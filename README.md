@@ -17,12 +17,17 @@ or by commanding as follows:
 
 Command
 ```
-chmod 755 install_homebrew.sh
-./install_homebrew.sh
+chmod 755 ~/dotfiles/scripts/install_homebrew.sh
+~/dotfiles/scripts/install_homebrew.sh
 ```
 
 ##### Linux
-comming soon
+
+Command
+```
+chmod 755 ~/dotfiles/scripts/install_apt.sh
+~/dotfiles/scripts/install_apt.sh
+```
 
 
 #### 2. zsh
@@ -56,8 +61,8 @@ rm -rf ./vim-colors-solarized
 
 Command
 ```
-chmod 755 install_python.sh
-./install_python.sh
+chmod 755 ~/dotfiles/scripts/install_python.sh
+~/dotfiles/scripts/install_python.sh
 ```
 
 
@@ -74,11 +79,18 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 
 #### 6. atom
-- comming soon
+- install atom
+- install apm packages
+
+Command
+```
+chmod 755 ~/dotfiles/scripts/install_atom.sh
+~/dotfiles/scripts/install_atom.sh
+```
+
 
 #### 7. github
 - comming soon
-
 
 
 ### Dependency
@@ -87,6 +99,7 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 - tmux
 - vim
 - peco
+- atom
 
 
 ### Contact
