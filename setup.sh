@@ -1,12 +1,14 @@
 #!/bin/bash
 
+CURRENT_DIR=`pwd`
+
 # 1. homebrew(OSX) or apt(Linux)
 if [ `uname` \=\= 'Darwin' ] ; then
-  chmod 755 ~/dotfiles/scripts/install_homebrew.sh
-  ~/dotfiles/scripts/install_homebrew.sh
+  chmod +x $CURRENT_DIR/scripts/install_homebrew.sh
+  $CURRENT_DIR/scripts/install_homebrew.sh
 else
-  chmod 755 ~/dotfiles/scripts/install_apt.sh
-  ~/dotfiles/scripts/install_apt.sh
+  chmod +x $CURRENT_DIR/scripts/install_apt.sh
+  $CURRENT_DIR/scripts/install_apt.sh
 fi
 
 
@@ -25,20 +27,20 @@ rm -rf ./vim-colors-solarized
 
 
 # 4. python
-chmod 755 ~/dotfiles/scripts/install_python.sh
-~/dotfiles/scripts/install_python.sh
+chmod +x $CURRENT_DIR/scripts/install_python.sh
+$CURRENT_DIR/scripts/install_python.sh
 
 
 # 5. set paths
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
-ln -sf ~/dotfiles/.zsh ~/.zsh
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $CURRENT_DIR/.vimrc ~/.vimrc
+ln -sf $CURRENT_DIR/.zshenv ~/.zshenv
+ln -sf $CURRENT_DIR/.zsh ~/.zsh
+ln -sf $CURRENT_DIR/.tmux.conf ~/.tmux.conf
 
 
 # 6. atom
-chmod 755 ~/dotfiles/scripts/install_atom.sh
-~/dotfiles/scripts/install_atom.sh
+chmod +x $CURRENT_DIR/scripts/install_atom.sh
+$CURRENT_DIR/scripts/install_atom.sh
 
 
 # 7. github

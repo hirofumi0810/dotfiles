@@ -3,7 +3,7 @@
 ### Installation
 You can conduct setup by
 ```
-chmod 755 setup.sh
+chmod +x setup.sh
 ./setup.sh
 ```
 
@@ -17,16 +17,17 @@ or by commanding as follows:
 
 Command
 ```
-chmod 755 ~/dotfiles/scripts/install_homebrew.sh
-~/dotfiles/scripts/install_homebrew.sh
+CURRENT_DIR=`pwd`
+chmod +x $CURRENT_DIR/scripts/install_homebrew.sh
+$CURRENT_DIR/scripts/install_homebrew.sh
 ```
 
 ##### Linux
 
 Command
 ```
-chmod 755 ~/dotfiles/scripts/install_apt.sh
-~/dotfiles/scripts/install_apt.sh
+chmod +x $CURRENT_DIR/scripts/install_apt.sh
+$CURRENT_DIR/scripts/install_apt.sh
 ```
 
 
@@ -61,8 +62,8 @@ rm -rf ./vim-colors-solarized
 
 Command
 ```
-chmod 755 ~/dotfiles/scripts/install_python.sh
-~/dotfiles/scripts/install_python.sh
+chmod +x $CURRENT_DIR/scripts/install_python.sh
+$CURRENT_DIR/scripts/install_python.sh
 ```
 
 
@@ -71,10 +72,10 @@ chmod 755 ~/dotfiles/scripts/install_python.sh
 
 Command
 ```
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.zshenv ~/.zshenv
-ln -sf ~/dotfiles/.zsh ~/.zsh
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sf $CURRENT_DIR/.vimrc ~/.vimrc
+ln -sf $CURRENT_DIR/.zshenv ~/.zshenv
+ln -sf $CURRENT_DIR/.zsh ~/.zsh
+ln -sf $CURRENT_DIR/.tmux.conf ~/.tmux.conf
 ```
 
 
@@ -84,8 +85,8 @@ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 Command
 ```
-chmod 755 ~/dotfiles/scripts/install_atom.sh
-~/dotfiles/scripts/install_atom.sh
+chmod +x $CURRENT_DIR/scripts/install_atom.sh
+$CURRENT_DIR/scripts/install_atom.sh
 ```
 
 

@@ -2,9 +2,12 @@
 # Path (Ubuntu setting)
 ######################################################################
 
+echo 'loading' `uname` path 'settings'
+
 # Anaconda
 # python3
 export PATH="$PYENV_ROOT/versions/anaconda3-4.1.1/bin/:$PATH"
+# TODO: update
 # python2
 # export PATH="$PYENV_ROOT/versions/anaconda-2.4.0/bin/:$PATH"
 

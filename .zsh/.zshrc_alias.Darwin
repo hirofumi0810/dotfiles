@@ -19,6 +19,7 @@ fi
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Atom
+# alias atom='/Applications/'
 
 # blowser
 alias chrome="open /Applications/Google\ Chrome.app"
@@ -30,3 +31,5 @@ alias github="open /Applications/Google\ Chrome.app http://github.com"
 
 # tensorflow environment
 alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate tensorflow"
+alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate pytorch"
+alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate chainer"

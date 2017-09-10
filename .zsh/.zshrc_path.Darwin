@@ -2,6 +2,8 @@
 # Path (OSX setting)
 ######################################################################
 
+echo 'loading' `uname` path 'settings'
+
 # Homebrew
 # TODO: solve overwriting between pyebv and homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH

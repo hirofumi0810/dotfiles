@@ -69,7 +69,9 @@ autoload zmv
 ######################################################################
 # module
 ######################################################################
+[ -f $ZDOTDIR/.zshrc_path.common ] && . $ZDOTDIR/.zshrc_path.common
 [ -f $ZDOTDIR/.zshrc_path.`uname` ] && . $ZDOTDIR/.zshrc_path.`uname`
+[ -f $ZDOTDIR/.zshrc_alias.common ] && . $ZDOTDIR/.zshrc_alias.common
 [ -f $ZDOTDIR/.zshrc_alias.`uname` ] && . $ZDOTDIR/.zshrc_alias.`uname`
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func

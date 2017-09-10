@@ -19,6 +19,8 @@ fi
 
 # tensorflow environment
 alias tf='source activate tensorflow'
+alias pt="source activate pytorch"
+alias ch="source activate chainer"
 alias de='source deactivate'
 
 # save from tmux buffer to clipboard
