@@ -24,12 +24,17 @@ else
   pip install https://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp35-cp35m-manylinux1_x86_64.whl
   # NOTE: change from http -> https because of the proxy setting
 fi
+
 pip install torchvision
 pip install chainer
 pip install librosa
+pip install python_speech_features
 pip install tqdm
 pip install autopep8
+pip install flake8
 pip install seaborn
+pip install line_profiler
+
 
 # create virtual env
 conda create -n tensorflow python=3.5

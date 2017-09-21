@@ -21,6 +21,7 @@ brew install caskroom/cask/brew-cask
 brew install peco
 brew install node
 brew install pyenv
+brew install pyenv-virtualenv
 
 # upgrade
 brew upgrade tmux
@@ -39,3 +40,4 @@ brew upgrade caskroom/cask/brew-cask
 brew upgrade peco
 brew upgrade node
 brew upgrade pyenv
+brew upgrade pyenv-virtualenv

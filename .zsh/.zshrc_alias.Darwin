@@ -19,7 +19,7 @@ fi
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Atom
-# alias atom='/Applications/'
+# alias atom='/Applications/Atom'
 
 # blowser
 alias chrome="open /Applications/Google\ Chrome.app"
