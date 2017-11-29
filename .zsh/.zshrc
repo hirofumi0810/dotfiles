@@ -78,3 +78,21 @@ autoload zmv
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
+
+
+######################################################################
+# anaconda setting
+######################################################################
+if [ `hostname` = 'arcs22' ]; then
+  echo 'Entering to conda env in arcs22...'
+  sleep 1
+  source activate arcs22
+elif [ `hostname` = 'arcs23' ]; then
+  echo 'Entering to conda env in arcs23...'
+  sleep 1
+  source activate arcs23
+elif [ `hostname` = 'amgp00' ]; then
+  echo 'Entering to conda env in amgp00...'
+  sleep 1
+  source activate amgp00
+fi
