@@ -14,4 +14,4 @@ else
 fi
 
 # apm install
-apm install --packages-file $CURRENT_DIR/dotfiles/atom/atomfile
+apm install --packages-file $CURRENT_DIR/scripts/atomfile

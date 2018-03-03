@@ -15,7 +15,6 @@ or by commanding as follows:
 - update brew
 - install some brew packages (including tmux, zsh, and pyenv)
 
-Command
 ```
 CURRENT_DIR=`pwd`
 chmod +x $CURRENT_DIR/scripts/install_homebrew.sh
@@ -24,7 +23,6 @@ $CURRENT_DIR/scripts/install_homebrew.sh
 
 ##### Linux
 
-Command
 ```
 chmod +x $CURRENT_DIR/scripts/install_apt.sh
 $CURRENT_DIR/scripts/install_apt.sh
@@ -34,7 +32,6 @@ $CURRENT_DIR/scripts/install_apt.sh
 #### 2. zsh
 - change shell from bash to zsh (if possiple)
 
-Command
 ```
 sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
 chsh -s /usr/local/bin/zsh
@@ -44,7 +41,6 @@ chsh -s /usr/local/bin/zsh
 #### 3. vim
 - install solarized
 
-Command
 ```
 mkdir -p ~/.vim
 mkdir -p ~/.vim/colors
@@ -60,7 +56,6 @@ rm -rf ./vim-colors-solarized
 - install some pip packages
 - install some deep learning toolkits
 
-Command
 ```
 chmod +x $CURRENT_DIR/scripts/install_python.sh
 $CURRENT_DIR/scripts/install_python.sh
@@ -70,7 +65,6 @@ $CURRENT_DIR/scripts/install_python.sh
 #### 5. path setting
 - set paths of vim, zsh, and tmux
 
-Command
 ```
 ln -sf $CURRENT_DIR/.vimrc ~/.vimrc
 ln -sf $CURRENT_DIR/.zshenv ~/.zshenv
@@ -83,7 +77,6 @@ ln -sf $CURRENT_DIR/.tmux.conf ~/.tmux.conf
 - install atom
 - install apm packages
 
-Command
 ```
 chmod +x $CURRENT_DIR/scripts/install_atom.sh
 $CURRENT_DIR/scripts/install_atom.sh

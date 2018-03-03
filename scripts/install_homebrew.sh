@@ -6,7 +6,8 @@ brew update
 
 # brew install
 brew install tmux
-brew install --disable-etcdir zsh
+# brew install --disable-etcdir zsh
+brew install zsh
 brew install zsh-completions
 brew install reattach-to-user-namespace
 brew install vim
