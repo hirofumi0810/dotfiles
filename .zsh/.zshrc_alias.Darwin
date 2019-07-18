@@ -2,7 +2,7 @@
 # alias (OSX setting)
 ######################################################################
 
-echo 'loading' `uname` alias 'settings'
+echo 'loading' $(uname) alias 'settings'
 
 # ls
 export CLICOLOR=1

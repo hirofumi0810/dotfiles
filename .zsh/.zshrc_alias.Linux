@@ -2,7 +2,7 @@
 # alias (Linux setting)
 ######################################################################
 
-echo 'loading' `uname` alias 'settings'
+echo 'loading' $(uname) alias 'settings'
 
 # ls
 alias ls='ls -a -F --color=auto'

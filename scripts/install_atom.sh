@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-CURRENT_DIR=`pwd`
+CURRENT_DIR=$(pwd)
 
-if [ `uname` \=\= "Darwin" ] ; then
+if [ $(uname) \=\= "Darwin" ]; then
   # OSX
   wget https://atom.io/download/mac.zip $CURRENT_DIR/
   unzip $CURRENT_DIR/mac.zip
@@ -10,7 +10,9 @@ if [ `uname` \=\= "Darwin" ] ; then
   sudo mv $CURRENT_DIR/Atom.app /Users/Applications/
 else
   # Linux
-  echo 'comming soon'
+  sudo add-apt-repository ppa:webupd8team/atom
+  sudo apt-get update
+  sudo apt-get install atom
 fi
 
 # apm install
