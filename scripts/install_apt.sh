@@ -7,6 +7,8 @@ sudo apt-get -y upgrade
 sudo apt-get install zsh
 sudo apt-get install git
 sudo apt-get install tmux
+sudo apt-get install --assume-yes xclip
+sudo apt install xsel
 
 # for CUDA
 sudo apt-get install -y build-essential cmake git unzip pkg-config
