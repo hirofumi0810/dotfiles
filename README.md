@@ -78,7 +78,11 @@ $CURRENT_DIR/scripts/install_atom.sh
 
 
 #### 7. github
-- comming soon
+
+```
+git config --global user.email "your e-mail address"
+git config --global user.name "your name"
+```
 
 
 ### Dependency
