@@ -1,38 +1,35 @@
 ######################################################################
 # powerlevel10k
 ######################################################################
-zinit ice wait lucid
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+# install https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf for Mac
+# or
+# install https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf for Mac
 
 ######################################################################
 # fast-syntax-highlighting
 ######################################################################
-zinit ice wait lucid
 zinit light zdharma/fast-syntax-highlighting
 
 ######################################################################
 # zsh-autosuggestions
 ######################################################################
-zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
 bindkey '^j' autosuggest-accept
 
 ######################################################################
 # history-search-multi-word
 ######################################################################
-zinit ice wait lucid
 zinit load zdharma-continuum/history-search-multi-word
 
 ######################################################################
 # git-open
 ######################################################################
-zinit ice wait lucid
 zinit light paulirish/git-open
 
 ######################################################################
 # bat
 ######################################################################
-zinit ice wait lucid
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
