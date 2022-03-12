@@ -1,5 +1,7 @@
 .DS_Store
 *.log
 .zcompdump
+.zsh_sessions
 .zshrc_ssh
+.zprofile
 .dropbox.attr

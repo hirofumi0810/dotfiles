@@ -69,38 +69,12 @@ autoload zmv
 ######################################################################
 # module
 ######################################################################
-[ -f $ZDOTDIR/.zshrc_path.common ] && . $ZDOTDIR/.zshrc_path.common
-[ -f $ZDOTDIR/.zshrc_path.$(uname) ] && . $ZDOTDIR/.zshrc_path.$(uname)
-[ -f $ZDOTDIR/.zshrc_alias.common ] && . $ZDOTDIR/.zshrc_alias.common
-[ -f $ZDOTDIR/.zshrc_alias.$(uname) ] && . $ZDOTDIR/.zshrc_alias.$(uname)
+[ -f $ZDOTDIR/.zshrc_path_common ] && . $ZDOTDIR/.zshrc_path_common
+[ -f $ZDOTDIR/.zshrc_path_$(uname) ] && . $ZDOTDIR/.zshrc_path_$(uname)
+[ -f $ZDOTDIR/.zshrc_alias_common ] && . $ZDOTDIR/.zshrc_alias_common
+[ -f $ZDOTDIR/.zshrc_alias_$(uname) ] && . $ZDOTDIR/.zshrc_alias_$(uname)
 [ -f $ZDOTDIR/.zshrc_comp ] && . $ZDOTDIR/.zshrc_comp
 [ -f $ZDOTDIR/.zshrc_func ] && . $ZDOTDIR/.zshrc_func
 [ -f $ZDOTDIR/.zshrc_history ] && . $ZDOTDIR/.zshrc_history
 [ -f $ZDOTDIR/.zshrc_tmux ] && . $ZDOTDIR/.zshrc_tmux
 [ -f $ZDOTDIR/.zshrc_ssh ] && . $ZDOTDIR/.zshrc_ssh
-
-
-######################################################################
-# anaconda setting
-######################################################################
-if [ $(hostname) = 'arcs22' ]; then
-  echo 'Entering to conda env in arcs22...'
-  sleep 1
-  source activate arcs22
-elif [ $(hostname) = 'arcs23' ]; then
-  echo 'Entering to conda env in arcs23...'
-  sleep 1
-  source activate arcs23
-elif [ $(hostname) = 'arcs24' ]; then
-  echo 'Entering to conda env in arcs24...'
-  sleep 1
-  source activate arcs24
-elif [ $(hostname) = 'arcs25' ]; then
-  echo 'Entering to conda env in arcs25...'
-  sleep 1
-  source activate arcs25
-elif [ $(hostname) = 'amgp00' ]; then
-  echo 'Entering to conda env in amgp00...'
-  sleep 1
-  source activate amgp00
-fi

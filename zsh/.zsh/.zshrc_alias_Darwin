@@ -16,10 +16,10 @@ if which pbcopy >/dev/null 2>&1 ; then
 fi
 
 # Sublime Text 3
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+; alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # Atom
-# alias atom='/Applications/Atom'
+; alias atom='/Applications/Atom'
 
 # blowser
 alias chrome="open /Applications/Google\ Chrome.app"
@@ -28,8 +28,3 @@ alias firefox="open -a Firefox"
 
 # favorite site
 alias github="open /Applications/Google\ Chrome.app http://github.com"
-
-# tensorflow environment
-alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate tensorflow"
-alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate pytorch"
-alias tf="source $HOME/.pyenv/versions/anaconda3-2.5.0/bin/activate chainer"

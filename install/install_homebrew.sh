@@ -1,4 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
+
+if [ $(uname) != 'Darwin' ]; then
+    exit 0
+fi
 
 # install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
