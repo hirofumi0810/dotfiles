@@ -6,7 +6,7 @@ all: install zsh vim tmux
 .PHONY: clean
 clean:
 	cd zsh && make clean && \
-	cd ../tmux && make clean \
+	cd ../tmux && make clean && \
 	cd ../vim && make clean
 
 .PHONY: install
