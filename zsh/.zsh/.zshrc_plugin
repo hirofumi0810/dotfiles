@@ -18,6 +18,12 @@ zinit light zsh-users/zsh-autosuggestions
 bindkey '^j' autosuggest-accept
 
 ######################################################################
+# history-search-multi-word
+######################################################################
+zinit ice wait lucid
+zinit load zdharma-continuum/history-search-multi-word
+
+######################################################################
 # git-open
 ######################################################################
 zinit ice wait lucid

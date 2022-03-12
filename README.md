@@ -42,7 +42,7 @@ cd vim && make
 ```
 
 
-#### 3. tmux
+#### 4. tmux
 
 ```
 cd tmux && make
@@ -50,7 +50,7 @@ cd tmux && make
 
 
 ### Dependency
-- homebrew
+- homebrew (OSX) / apt (Linux)
 - zsh
 - tmux
 - vim
