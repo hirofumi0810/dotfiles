@@ -11,5 +11,5 @@ init:
 .PHONY: clean
 clean:
 	unlink ${HOME}/.zshenv || true && \
-	unlink ${HOME}/.zsh || true. && \
+	unlink ${HOME}/.zsh || true && \
 	rm -rf ${HOME}/.local/share/zinit || true
