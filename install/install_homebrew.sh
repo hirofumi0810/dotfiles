@@ -7,6 +7,7 @@ fi
 # install homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
+# if you cannot update brew, try "git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/ fetch --unshallow"
 
 # brew install
 brew install tmux
@@ -22,7 +23,7 @@ brew install sqlite
 brew install tree
 brew install watch
 brew install node
-brew install caskroom/cask/brew-cask
+# brew install caskroom/cask/brew-cask
 brew install peco
 brew install node
 brew install pyenv
@@ -41,7 +42,7 @@ brew upgrade sqlite
 brew upgrade tree
 brew upgrade watch
 brew upgrade node
-brew upgrade caskroom/cask/brew-cask
+# brew upgrade caskroom/cask/brew-cask
 brew upgrade peco
 brew upgrade node
 brew upgrade pyenv
