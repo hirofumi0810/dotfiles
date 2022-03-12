@@ -5,6 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# reference: https://github.com/romkatv/powerlevel10k/issues/1203
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s workspace
+fi
+
 ######################################################################
 # 全般
 ######################################################################
@@ -113,3 +118,4 @@ zinit light-mode for \
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+# If you want to change the setting, command "p10k configure"
