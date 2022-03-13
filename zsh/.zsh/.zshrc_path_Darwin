@@ -9,8 +9,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Add Visual Studio Code (code)
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
-# Anaconda
-# export PATH="$PYENV_ROOT/versions/anaconda3-2.5.0/bin/:$PATH"
-
 # nodebrew
 # export PATH=$HOME/.nodebrew/current/bin:$PATH

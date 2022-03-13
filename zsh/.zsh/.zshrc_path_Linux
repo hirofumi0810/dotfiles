@@ -2,9 +2,6 @@
 # Path (Ubuntu setting)
 ######################################################################
 
-# Anaconda
-# export PATH="$PYENV_ROOT/versions/anaconda3-5.3.1/bin/:$PATH"
-
 # linuxbrew
 # export PATH="$HOME/.linuxbrew/bin:$PATH"
 # export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
