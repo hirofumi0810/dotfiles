@@ -32,8 +32,9 @@ PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 bindkey -e
 
 # 読み込むテーマを指定
-ZSH_THEME="prompt"
+# ZSH_THEME="prompt"
 # ZSH_THEME="agnoster"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # 文字コード
@@ -120,6 +121,7 @@ zinit light-mode for \
 [ -f ${ZDOTDIR}/.zshrc_tmux ] && . ${ZDOTDIR}/.zshrc_tmux
 [ -f ${ZDOTDIR}/.zshrc_plugin ] && . ${ZDOTDIR}/.zshrc_plugin
 [ -f ${ZDOTDIR}/.zshrc_ssh ] && . ${ZDOTDIR}/.zshrc_ssh
+[ -f ${ZDOTDIR}/.zshrc_peco ] && . ${ZDOTDIR}/.zshrc_peco
 
 # To customize prompt, run `p10k configure` or edit ${HOME}/.zsh/.p10k.zsh.
 [[ ! -f ${HOME}/.zsh/.p10k.zsh ]] || source ${HOME}/.zsh/.p10k.zsh
