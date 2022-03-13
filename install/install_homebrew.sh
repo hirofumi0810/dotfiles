@@ -23,7 +23,6 @@ brew install sqlite
 brew install tree
 brew install watch
 brew install node
-# brew install caskroom/cask/brew-cask
 brew install peco
 brew install node
 brew install pyenv
@@ -42,7 +41,6 @@ brew upgrade sqlite
 brew upgrade tree
 brew upgrade watch
 brew upgrade node
-# brew upgrade caskroom/cask/brew-cask
 brew upgrade peco
 brew upgrade node
 brew upgrade pyenv

@@ -11,24 +11,13 @@ or by commanding step by step as follows:
 #### 1. homebrew / apt
 - install zsh, vim, tmux, git etc.
 
-##### OSX
-- install homebrew
-- update brew
-- install brew packages (including tmux, zsh, and pyenv etc.)
-
-```
-cd install && make
-```
-
-##### Linux
-
 ```
 cd install && make
 ```
 
 
 #### 2. zsh
-- change shell from bash to zsh (if possible)
+- setup for zsh configuration (zsh installation is not included)
 
 ```
 cd zsh && make
@@ -37,7 +26,7 @@ sudo reboot
 
 
 #### 3. vim
-- install solarized
+- setup for vim configuration (vim installation is not included)
 
 ```
 cd vim && make
@@ -53,7 +42,7 @@ cd tmux && make
 
 
 #### 5. miniconda
-- install python enviroment via miniconda
+- install python/conda environment via miniconda
 
 ```
 cd python && make
