@@ -34,6 +34,7 @@ bindkey -e
 # 読み込むテーマを指定
 ZSH_THEME="prompt"
 # ZSH_THEME="agnoster"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # 文字コード
 LANG=ja_JP.UTF-8
@@ -117,7 +118,6 @@ zinit light-mode for \
 [ -f ${ZDOTDIR}/.zshrc_func ] && . ${ZDOTDIR}/.zshrc_func
 [ -f ${ZDOTDIR}/.zshrc_history ] && . ${ZDOTDIR}/.zshrc_history
 [ -f ${ZDOTDIR}/.zshrc_tmux ] && . ${ZDOTDIR}/.zshrc_tmux
-[ -f ${ZDOTDIR}/.zshrc_ssh ] && . ${ZDOTDIR}/.zshrc_ssh
 [ -f ${ZDOTDIR}/.zshrc_plugin ] && . ${ZDOTDIR}/.zshrc_plugin
 [ -f ${ZDOTDIR}/.zshrc_ssh ] && . ${ZDOTDIR}/.zshrc_ssh
 
