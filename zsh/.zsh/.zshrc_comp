@@ -25,3 +25,11 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
+# コマンドラインオプションをリストで選択できるようにする
+zstyle ':completion:*' menu select
+
+# コマンドライン引数をリストで選択できるようにする
+zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files.
+# https://gist.github.com/LukeSmithxyz/e62f26e55ea8b0ed41a65912fbebbe52
