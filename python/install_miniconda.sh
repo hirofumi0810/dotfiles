@@ -30,7 +30,14 @@ elif [ $# -eq 0 ]; then
 fi
 
 if [ $(uname) = "Darwin" ]; then
-    CONDA_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+    if [[ $(uname -m) = 'arm64' ]]; then
+        # M1
+        CONDA_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+    elif [[ $(uname -m) = 'x86_64' ]]; then
+        CONDA_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+    else
+        exit 1
+    fi
 elif [ $(uname) = "Linux" ]; then
     CONDA_URL=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 else
@@ -39,34 +46,33 @@ fi
 
 if [ ! -e "${output_dir}/etc/profile.d/conda.sh" ]; then
     if [ ! -e miniconda.sh ]; then
-        wget --tries=3 "${CONDA_URL}" -O miniconda.sh || exit 1
+        wget --tries=3 "${CONDA_URL}" -O miniconda.sh || exit 1;
     fi
 
-    bash miniconda.sh -b -p "${output_dir}" || exit 1
+    bash miniconda.sh -b -p "${output_dir}" || exit 1;
 fi
 
-# source "${HOME}/miniconda3/etc/profile.d/conda.sh" || exit 1
-. "${HOME}/miniconda3/etc/profile.d/conda.sh" || exit 1
-conda deactivate || exit 1
+. "${HOME}/miniconda3/etc/profile.d/conda.sh" || exit 1;
+conda deactivate || exit 1;
 
 # If the env already exists, skip recreation
 if [ -n "${name}" ] && ! conda activate ${name}; then
-    conda create -yn "${name}"
+    conda create -yn "${name}" || exit 1;
 fi
 
 if [ -n "${PYTHON_VERSION}" ]; then
-    conda install -y conda "python=${PYTHON_VERSION}"
+    conda install -y conda "python=${PYTHON_VERSION}" || exit 1;
 else
-    conda install -y conda
+    conda install -y conda || exit 1;
 fi
 
-conda install -y pip setuptools
+conda install -y pip setuptools || exit 1;
 
 ###
 
-conda update -n base -c defaults conda
-conda activate ${name}
-conda env list
+conda update -n base -c defaults conda || exit 1;
+conda activate ${name} || exit 1;
+conda env list || exit 1;
 if [ -f miniconda.sh ]; then
     rm miniconda.sh
 fi
