@@ -12,6 +12,8 @@ if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s workspace
 fi
 
+source /etc/profile
+
 ######################################################################
 # 全般
 ######################################################################
@@ -31,6 +33,7 @@ bindkey -e
 
 # 読み込むテーマを指定
 ZSH_THEME="prompt"
+# ZSH_THEME="agnoster"
 
 # 文字コード
 LANG=ja_JP.UTF-8
@@ -44,7 +47,6 @@ PAGER=less
 # ウインドウ名の表示
 set -g set-titles on
 set -g set-titles-string '#W'
-
 
 ######################################################################
 # option
