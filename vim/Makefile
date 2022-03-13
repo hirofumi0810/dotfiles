@@ -1,6 +1,6 @@
 .PHONY: init
 init:
-	ln -sf ${PWD}/.vimrc ${HOME}/.vimrc
+	ln -sf .vimrc ${HOME}/.vimrc
 	mkdir -p ${HOME}/.vim/colors
 	mkdir -p ${HOME}/.vim/backup
 	git clone https://github.com/altercation/vim-colors-solarized

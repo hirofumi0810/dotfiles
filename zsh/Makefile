@@ -3,8 +3,8 @@ SHELL=/bin/zsh
 .PHONY: init
 init:
 	sh -c "$(curl -fsSL https://git.io/zinit-install)" && \
-	ln -sf ${PWD}/.zshenv ${HOME}/.zshenv && \
-    ln -sf ${PWD}/.zsh ${HOME}/.zsh && \
+	ln -sf .zshenv ${HOME}/.zshenv && \
+    ln -sf .zsh ${HOME}/.zsh && \
 	source ${HOME}/.zsh/.zshrc && \
 	zinit self-update
 
