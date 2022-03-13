@@ -5,4 +5,4 @@ init:
 .PHONY: clean
 clean:
 	rm -rf ${HOME}/miniconda3 || true && \
-	rm miniconda.sh || true
+	rm ${PWD}/miniconda.sh || true
