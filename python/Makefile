@@ -1,7 +1,8 @@
 .PHONY: init
 init:
-	. ./install_miniconda.sh default 3.9
+	. ./install_miniconda.sh ${HOME}/miniconda3 default 3.9
 
 .PHONY: clean
 clean:
-	rm -rf ${HOME}/miniconda3
+	rm -rf ${HOME}/miniconda3 || true && \
+	rm miniconda.sh || true
