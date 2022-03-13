@@ -119,6 +119,7 @@ zinit light-mode for \
 [ -f ${ZDOTDIR}/.zshrc_tmux ] && . ${ZDOTDIR}/.zshrc_tmux
 [ -f ${ZDOTDIR}/.zshrc_ssh ] && . ${ZDOTDIR}/.zshrc_ssh
 [ -f ${ZDOTDIR}/.zshrc_plugin ] && . ${ZDOTDIR}/.zshrc_plugin
+[ -f ${ZDOTDIR}/.zshrc_ssh ] && . ${ZDOTDIR}/.zshrc_ssh
 
 # To customize prompt, run `p10k configure` or edit ${HOME}/.zsh/.p10k.zsh.
 [[ ! -f ${HOME}/.zsh/.p10k.zsh ]] || source ${HOME}/.zsh/.p10k.zsh
