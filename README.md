@@ -9,6 +9,8 @@ make
 or by commanding step by step as follows:
 
 #### 1. homebrew / apt
+- install zsh, vim, tmux, git etc.
+
 ##### OSX
 - install homebrew
 - update brew
@@ -26,7 +28,7 @@ cd install && make
 
 
 #### 2. zsh
-- change shell from bash to zsh (if possiple)
+- change shell from bash to zsh (if possible)
 
 ```
 cd zsh && make
@@ -43,9 +45,18 @@ cd vim && make
 
 
 #### 4. tmux
+- setup for tmux configuration (tmux installation is not included)
 
 ```
 cd tmux && make
+```
+
+
+#### 5. miniconda
+- install python enviroment via miniconda
+
+```
+cd python && make
 ```
 
 
@@ -54,6 +65,7 @@ cd tmux && make
 - zsh
 - tmux
 - vim
+- miniconda
 
 
 ### Contact
