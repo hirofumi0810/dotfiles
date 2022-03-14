@@ -13,3 +13,4 @@ sudo apt-get install git
 sudo apt-get install tmux
 sudo apt-get install --assume-yes xclip
 sudo apt install xsel
+sudo apt-get install peco

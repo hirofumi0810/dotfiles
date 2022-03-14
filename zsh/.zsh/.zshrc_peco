@@ -1,3 +1,7 @@
+if [ $(uname) = "Linux" ]; then
+    export PATH="${HOME}/bin/:$PATH"
+fi
+
 # 過去に実行したコマンドを選択。ctrl-rにバインド
 function peco-select-history() {
   BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
