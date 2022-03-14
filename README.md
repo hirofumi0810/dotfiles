@@ -1,61 +1,82 @@
 # My dotfiles
 
-### Installation
-You can conduct setup by
-```
+## Installation
+
+You can conduct all setups by
+
+```bash
+#!/bin/bash
 make
 ```
 
-or by commanding step by step as follows:
+or step by step as follows:
 
-#### 1. homebrew / apt
-- install zsh, vim, tmux, git etc.
+### 1. homebrew / apt
 
-```
+- Install zsh, vim, tmux, git etc.
+
+```bash
+#!/bin/bash
 cd install && make
 ```
 
+### 2. zsh
 
-#### 2. zsh
-- setup for zsh configuration (zsh installation is not included)
+- Setup for zsh configuration (zsh installation is not included)
 
-```
+```bash
+#!/bin/bash
 cd zsh && make
 sudo reboot
-```
-
-
-#### 3. vim
-- setup for vim configuration (vim installation is not included)
 
 ```
+
+### 3. vim
+
+- Setup for vim configuration (vim installation is not included)
+
+```bash
+#!/bin/bash
 cd vim && make
 ```
 
+### 4. tmux
 
-#### 4. tmux
-- setup for tmux configuration (tmux installation is not included)
+- Setup for tmux configuration (tmux installation is not included)
 
-```
+```bash
+#!/bin/bash
 cd tmux && make
 ```
 
+### 5. miniconda
 
-#### 5. miniconda
-- install python/conda environment via miniconda
+- Install python/conda environment via miniconda
 
-```
+```bash
+#!/bin/bash
 cd python && make
 ```
 
+### 6. peco
+
+- Install peco (Linux)
+- peco is installed in `install` by default. If it is impossible to use apt for Linux, command as follows:
+
+```bash
+#!/bin/bash
+cd peco && make
+```
 
 ### Dependency
+
 - homebrew (OSX) / apt (Linux)
 - zsh
 - tmux
 - vim
 - miniconda
-
+- peco
 
 ### Contact
+
 hiro.mhbc@gmail.com
