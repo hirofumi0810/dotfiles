@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 .PHONY: init
 init:
 	ln -sf ${PWD}/.tmux.conf ${HOME}/.tmux.conf

@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 .PHONY: init
 init:
 	sh -c "$(curl -fsSL https://git.io/zinit-install)" && \

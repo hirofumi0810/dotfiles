@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 .PHONY: init
 init:
 	. ./install_miniconda.sh ${HOME}/miniconda3 default 3.9

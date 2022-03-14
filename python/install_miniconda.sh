@@ -49,7 +49,7 @@ if [ ! -e "${output_dir}/etc/profile.d/conda.sh" ]; then
         wget --tries=3 "${CONDA_URL}" -O miniconda.sh || exit 1;
     fi
 
-    bash miniconda.sh -b -p "${output_dir}" || exit 1;
+    bash ${PWD}/miniconda.sh -b -p "${output_dir}" || exit 1;
 fi
 
 . "${HOME}/miniconda3/etc/profile.d/conda.sh" || exit 1;
@@ -73,6 +73,6 @@ conda install -y pip setuptools || exit 1;
 conda update -n base -c defaults conda || exit 1;
 conda activate ${name} || exit 1;
 conda env list || exit 1;
-if [ -f miniconda.sh ]; then
-    rm miniconda.sh
+if [ -f ${PWD}/miniconda.sh ]; then
+    rm ${PWD}/miniconda.sh
 fi
