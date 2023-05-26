@@ -21,3 +21,36 @@ fi
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias copy='tmux save-buffer - | pbcopy'
+
+
+# sj: show info for a given job ID
+# Usage: sj <job_id>
+alias sj='scontrol show jobid -dd '
+
+# sq: *very verbose* squeue, automatically paginated
+alias sq='squeue -o            "%.8Q %.10i %.3P %.9j %.6u %.2t %.16S %.10M %.10l %.5D %.12b %.2c %.4m %R" -S -t,-p,i | less -N '
+
+# mj: show a list of all my jobs
+# Usage: mj
+alias mj='squeue -u $USER -o   "%.8Q %.10i %.3P %.9j %.6u %.2t %.16S %.10M %.10l %.5D %.12b %.2c %.4m %R" -S -t,-p,i | less -N '
+
+# sp: show a list of pending jobs across the cluster,
+# in decreasing order of SLURM priority
+# Usage: sp
+alias sp='squeue -t PENDING -o "%.8Q %.10i %.3P %.9j %.6u %.2t %.16S %.10M %.10l %.5D %.12b %.2c %.4m %R" -S -t,-p,i | less -N '
+
+# cj: cancel a job
+# Usage: cj <job_id>
+# OR to cancel ALL your jobs (be careful!): cj -u $USER
+alias cj='scancel '
+
+# rp: randomly reassign jobs from one partition to another, up to a specified limit
+# Usage: rp <old_partition> <new_partition> <job_limit>
+function rp {
+    squeue -u $USER -t PENDING -p "$1" -o '%i' -h | \
+        sort -R | \
+        tail -n "$3" | \
+        xargs -n 1 -I '{}' \
+            scontrol update jobid='{}' partition="$2" \
+    ;
+}

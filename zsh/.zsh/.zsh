@@ -1,0 +1,1 @@
+/private/home/hirofumii/dotfiles/zsh/.zsh
